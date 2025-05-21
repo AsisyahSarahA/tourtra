@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- flowbite -->
+     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <link href="/src/styles.css" rel="stylesheet" />
+    <title>Tour Tra</title>
+</head>
+<body class=" bg-light-900">
+    <!-- 2C7381 -->
+    <nav class="flex fixed bg-cover bg-center text-white p-5 pt-6" style="background-image: url('/asset/img/navbar.png'); height: 80px; width: 60%;">
+        <div>
+        
+            <ul class="flex space-x-5 ">
+                <li class="text-2xl font-bold mr-15 ">Tour Tra</li>
+                <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+                <li><a href="riview.html" class="hover:text-gray-300">Riview</a></li>
+                <li><a href="/transpost.html" class="hover:text-gray-300">Maps</a></li>
+                <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>  
+
+    <!-- Searching -->
+<section class="flex justify-end">
+    <div class="mt-5 mr-20">
+        <div class="flex items-center space-x-2">
+            <!-- Wrapper kitah -->
+            <div class="relative w-64">
+                <!-- Search Icon -->
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                    <svg class="w-6 h-6 text-cyan-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" d="M21 21l-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0z" />
+                    </svg>
+                </div>
+                <!--search field  -->
+                <input
+                    class="font-mono pl-4 border border-gray-300 rounded-full py-2 w-full shadow-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#3CB6CD]"
+                    type="text"
+                    placeholder="Search..."
+                />
+            </div>
+
+            <!-- Login Button -->
+            <button type="submit" class= "bg-[#3CB6CD] text-white rounded-full px-4 py-2">Login</button>
+        </div>
+    </div>
+</section>
+
+
+
+    
+</body>
+</html>
