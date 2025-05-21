@@ -1,0 +1,17 @@
+Nama Font Tourtra:
+
+1. Caveat : Bold
+2. Crimson Text
+3. Lordina Solid
+4. Open Sans
+5. Source SSerif Pro
+6. Nova Script
+7. Mukta Mahee
+Kode Warna:
+
+1. Biru tua: 2C7381
+2. Biru Muda: 3CB6CD
+3. Oren: FFA800
+4. putih: FFFFFF
+5. cyan :3CB6CD -opacity = 26%
+6. Kuning : FFDB0F
