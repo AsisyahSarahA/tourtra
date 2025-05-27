@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- flowbite -->
+     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+     <!-- font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nova+Script&display=swap" rel="stylesheet">
+    <title>About</title>
+</head>
+ 
+<body class="font-sans  bg-gray-100">
+
+    <div id="navbar"></div>
+    <main class="flex flex-col md:flex-row items-center justify-center px-6 py-12">
+   
+    <!-- Grid Icon -->
+    <div class="grid grid-cols-3 gap-4 mt-20 p-6 mr-10 ">
+      <!-- Baris 1 -->
+      <div class="w-30 h-30 bg-teal-100 rounded-tr-full shadow-2xl overflow-hidden ">
+        <img src="/img/kuta.jpg" alt="Gambar 1" class="w-full h-full object-cover shadow-2xl">
+      </div>
+      <div class="w-30 h-30 bg-teal-100 rounded-t-full shadow-2xl"></div>
+      <div class="w-30 h-30 bg-teal-100 rounded-r-full shadow-2xl overflow-hidden">
+        <img src="/img/kuta.jpg" alt="Gambar 1" class="w-full h-full object-cover shadow-2xl">
+      </div>
+      
+      <!-- Baris 2 -->
+      <div class="w-30 h-30 bg-teal-100 bg-teal-100 rounded-l-full shadow-2xl"></div>
+      <div class="w-30 h-30 bg-teal-100 rounded-full shadow-2xl overflow-hidden">
+        <img src="/img/kuta.jpg" alt="Gambar 1" class="w-full h-full object-cover shadow-2xl">
+      </div>
+      <div class="w-30 h-30 bg-teal-100 rounded-tl-full rounded-b-none shadow-2xl"></div>
+      
+      <!-- Baris 3-->
+      <div class="w-30 h-30 bg-teal-100 rounded-full shadow-2xl overflow-hidden">        
+        <img src="/img/kuta.jpg" alt="Gambar 1" class="w-full h-full object-cover shadow-2xl">
+      </div>
+      <div class="w-30 h-30 bg-teal-100 rounded-bl-full shadow-2xl"></div>
+      <div class="w-30 h-30 bg-teal-100 rounded-t-full shadow-2xl overflow-hidden">
+         <img src="/img/kuta.jpg" alt="Gambar 1" class="w-full h-full object-cover shadow-2xl">
+      </div>
+    </div>
+
+    <!-- Text Content -->
+    <div class="max-w-xl text-center md:text-left mt-10 md:mt-0">
+      <h1 class="text-4xl font-semibold text-cyan-800 mb-4 italic">Tour Tra</h1>
+      <p class="text-sm text-gray-700 leading-relaxed font-medium">
+        Di TourTra, Kami Percaya Bahwa Setiap Perjalanan Adalah Cerita—Dan Kami Di Sini Untuk Membantu Kamu Menuliskannya Dengan Indah.<br><br>
+        Kami Bukan Sekadar Penyedia Layanan Wisata. Kami Adalah Partner Petualanganmu—Siap Membawamu Menjelajah Ke Tempat-Tempat Luar Biasa,<br><br>
+        Mulai Dari Liburan Santai Hingga Petualangan Penuh Tantangan, TourTra Hadir Untuk Memastikan Setiap Langkahmu Berarti. Misi Kami Adalah Menjadikan Setiap Perjalanan Tak Hanya Tentang Destinasi, Tapi Tentang Kisah Yang Akan Selalu Kamu Ingat.
+      </p>
+    </div>
+
+  </main>
+
+    
+  <script>
+
+    //panggil navbar
+    fetch('/page/navbar.html')
+      .then(res => res.text())
+      .then(navbar => {
+        document.getElementById('navbar').innerHTML = navbar;
+      });
+
+
+  </script>
+</body>
+</html>

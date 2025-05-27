@@ -15,3 +15,4 @@ Kode Warna:
 4. putih: FFFFFF
 5. cyan :3CB6CD -opacity = 26%
 6. Kuning : FFDB0F
+7. purple : CD3CA1
