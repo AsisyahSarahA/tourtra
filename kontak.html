@@ -10,52 +10,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-blue-200 font-sans">
+        
         <div class="container mx-auto py-16 px-4 md:px-0">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
-                <div class="p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2   gap-8 max-w-4xl mx-auto bg-cyan-300 w-full shadow-md rounded-lg overflow-hidden">
+                <div class="p-8  bg-[url(img/gunung1.jpg)] bg-no-repeat bg-cover  ">
                     <div class="space-y-4">
+                        <div class="">
+                    </div>
         </div>
     </div>
-    <div class="bg-gray-50 p-8">
+    <div class="bg-gray-5 p-8 " >
+        <div class="flex justify-between">
+        <img src="/img/pesawat.png" class="w-[30%] ">
+            
+            <img src="/img/traveling.png" class="w-[30%] justify-end">
+            </div>
+        
         <form id="contactForm">
             <div class="mb-4">
-                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nama Lengkap<span class="text-red-500">*</span>:</label>
+                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nama Lengkap<span class="text-red-500"> </span>:</label>
                 <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Nama lengkap Anda">
                 <p class="text-red-500 text-xs italic mt-1 hidden" id="nameError">Nama harus diisi.</p>
             </div>
             <div class="mb-4">
-                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email<span class="text-red-500">*</span>:</label>
+                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email<span class="text-red-500"> </span>:</label>
                 <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Alamat email Anda">
                 <p class="text-red-500 text-xs italic mt-1 hidden" id="emailError">Format email tidak valid.</p>
             </div>
             <div class="mb-4">
-                <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subjek:</label>
+                <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subjek :</label>
                 <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Subjek pesan Anda (opsional)">
             </div>
             <div class="mb-6">
-                <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Pesan<span class="text-red-500">*</span>:</label>
-                <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Tulis pesan Anda di sini"></textarea>
+                <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Pesan<span class="text-red-500"> </span>:</label>
+                <textarea id="message" name="message" rows="3" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Tulis pesan Anda di sini"></textarea>
                 <p class="text-red-500 text-xs italic mt-1 hidden" id="messageError">Pesan tidak boleh kosong.</p>
     </div>
     <div class="flex items-center">
                         <i class="fas fa-map-marker-alt text-indigo-500 mr-3"></i>
                         <p class="text-gray-700">Tasikmalaya</p>
                     </div>
+                    <div class="flex justify-between">
+                        
+                        <div>
                     <div class="flex items-center">
                         <i class="fas fa-envelope text-indigo-500 mr-3"></i>
-                        <p class="text-gray-700"><a href="mailto:[alamat_email_anda]">arpinm89@gmail.com</a></p>
+                        <p class="text-gray-700"><a href="mailto:[alamat_email_anda]">tourtra@gmail.com</a></p>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-phone text-indigo-500 mr-3"></i>
                         <p class="text-gray-700"><a href="tel:[nomor_telepon_anda]">085862708927</a></p>
                     </div>
-                    <div class="flex space-x-4 mt-4">
+                    </div>
+                    <img src="/img/travelling.jpeg" class="w-[30%] justify-end">
+                    </div>
+<div class="flex items-center  justify-between">
+                    <div class="flex space-x-4 mt-4 pb-9">
                         <a href="#" class="text-gray-500 hover:text-indigo-500"><i class="fab fa-facebook-f fa-lg"></i></a>
                         <a href="#" class="text-gray-500 hover:text-indigo-500"><i class="fab fa-twitter fa-lg"></i></a>
                         <a href="#" class="text-gray-500 hover:text-indigo-500"><i class="fab fa-instagram fa-lg"></i></a>
                     </div>
-    <div class="flex items-center justify-end">
+    
         <button type="submit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300" id="submitButton">
             Kirim Pesan
         </button>
@@ -68,6 +84,7 @@
         <p class="text-green-500 text-sm italic mt-1 ml-3 hidden" id="successMessage">Pesan berhasil dikirim!</p>
         <p class="text-red-500 text-sm italic mt-1 ml-3 hidden" id="errorMessage">Terjadi kesalahan saat mengirim pesan.</p>
                     </div>
+                    
                 </form>
             </div>
         </div>
