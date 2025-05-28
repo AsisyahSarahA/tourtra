@@ -28,12 +28,24 @@ body {
     position: absolute;
     top: 0;
     height: 100%;
+    width: 50%;
     transition: all 0.6s ease-in-out;
+    background: url('img/kepulauan-raja-ampat-plesiran-esq-tours-travel.jpg') no-repeat center center / cover;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.form-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.40);
+    border-radius: 30px;
+    z-index: -1;
 }
 
 .sign-in {
     left: 0;
-    width: 50%;
     z-index: 2;
 }
 
@@ -43,7 +55,6 @@ body {
 
 .sign-up {
     left: 0;
-    width: 50%;
     opacity: 0;
     z-index: 1;
 }
@@ -67,13 +78,14 @@ body {
 }
 
 .form-container form {
-    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 0 40px;
     height: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .form-container input {
@@ -143,15 +155,14 @@ body {
 
 .container.active .toggle-container {
     transform: translateX(-100%);
-    border-radius: 0 150px 100px 0;
+    border-radius: 0 100px 100px 0;
 }
 
 .toggle {
     position: relative;
-    background-color: #3e3bdb;
-    height: 100%;
     background: linear-gradient(to right, #3e3bdb, #3e3bdb);
     color: #fff;
+    height: 100%;
     width: 200%;
     left: -100%;
     transform: translateX(0);
@@ -194,7 +205,7 @@ body {
     transform: translateX(200%);
 }
 
-/* VIDEO BACKGROUND STYLE */
+/* VIDEO BACKGROUND */
 .video-bg {
     position: absolute;
     top: 0%;
