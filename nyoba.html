@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login & Register Tourta - Tailwind</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-dNrB6nGQpWl+7Eyqfhz+q2+e7jfFZwxKYgnmY5o1kZ9RXFx3h/6vL9z1t3NlHDZK6qZRk+2BpsBIlH5QXq0jVw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  
+  <style>
+    /* Custom untuk transisi slide */
+    #container {
+      transition: transform 0.6s ease-in-out;
+      position: relative;
+      width: 768px;
+      max-width: 100%;
+      min-height: 480px;
+      overflow: hidden;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      background: white;
+      display: flex;
+    }
+
+    .form-container {
+      position: relative;
+      width: 50%;
+      padding: 2rem 3rem;
+      transition: all 0.6s ease-in-out;
+      flex-shrink: 0;
+    }
+
+    /* posisi default sign-in kiri */
+    .sign-in {
+      left: 0;
+    }
+    /* posisi default sign-up kanan disembunyikan */
+    .sign-up {
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      background: #f3f4f6;
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* saat toggle aktif, geser container */
+    #container.right-panel-active .sign-in {
+      transform: translateX(100%);
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    #container.right-panel-active .sign-up {
+      opacity: 1;
+      pointer-events: all;
+      position: relative;
+      transform: translateX(100%);
+    }
+
+    /* toggle-panel */
+    .toggle-container {
+      position: relative;
+      width: 50%;
+      background: #2563eb; /* Tailwind blue-600 */
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .toggle-panel {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    /* video background styling */
+    .video-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.3;
+      border-radius: 10px 0 0 10px;
+    }
+
+    /* tombol toggle */
+    .toggle-btn {
+      background-color: white;
+      color: #2563eb;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border: none;
+    }
+    .toggle-btn:hover {
+      background-color: #e0e7ff;
+    }
+
+    /* social icons */
+    .social-icons a {
+      margin-right: 0.75rem;
+      color: #4b5563; /* gray-600 */
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #2563eb;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div id="container">
+    <!-- Sign In -->
+    <div class="form-container sign-in flex flex-col justify-center">
+      <form class="space-y-4">
+        <h1 class="text-3xl font-bold mb-4">Sign In</h1>
+        <div class="social-icons flex mb-3">
+          <a href="#" class="icon text-2xl"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="icon text-2xl"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="icon text-2xl"><i class="fab fa-github"></i></a>
+          <a href="#" class="icon text-2xl"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span class="block text-gray-500 mb-2">Masukan Email dan Password</span>
+        <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded" />
+        <input type="password" placeholder="Password" class="w-full p-3 border border-gray-300 rounded" />
+        <a href="#" class="text-sm text-blue-600 hover:underline">Lupa Password?</a>
+        <button class="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700 transition">Sign In</button>
+      </form>
+    </div>
+
+    <!-- Sign Up -->
+    <div class="form-container sign-up flex flex-col justify-center">
+      <form class="space-y-4">
+        <h1 class="text-3xl font-bold mb-4">Create Account</h1>
+        <div class="social-icons flex mb-3">
+          <a href="#" class="icon text-2xl"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="icon text-2xl"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="icon text-2xl"><i class="fab fa-github"></i></a>
+          <a href="#" class="icon text-2xl"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span class="block text-gray-500 mb-2">Masukan Email dan Password</span>
+        <input type="text" placeholder="Name" class="w-full p-3 border border-gray-300 rounded" />
+        <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded" />
+        <input type="password" placeholder="Password" class="w-full p-3 border border-gray-300 rounded" />
+        <button class="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700 transition">Sign Up</button>
+      </form>
+    </div>
+
+    <!-- Toggle panel -->
+    <div class="toggle-container relative">
+      <video autoplay muted loop playsinline class="video-bg"></video>
+
+      <div class="toggle-panel toggle-left mb-6">
+        <h1 class="text-4xl font-bold mb-2">Welcome Back!</h1>
+        <p class="mb-6">Enter your personal details to use all of site features</p>
+        <button id="login" class="toggle-btn">Sign In</button>
+      </div>
+
+      <div class="toggle-panel toggle-right">
+        <h1 class="text-4xl font-bold mb-2">Hallo Selamat Datang Di Web TOURTA</h1>
+        <p class="mb-6">Daftar dengan rincian pribadi Anda untuk menggunakan semua fitur situs</p>
+        <button id="register" class="toggle-btn">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle slide
+    const container = document.getElementById('container');
+    const btnSignUp = document.getElementById('register');
+    const btnSignIn = document.getElementById('login');
+
+    btnSignUp.addEventListener('click', () => {
+      container.classList.add('right-panel-active');
+    });
+
+    btnSignIn.addEventListener('click', () => {
+      container.classList.remove('right-panel-active');
+    });
+  </script>
+
+</body>
+</html>
