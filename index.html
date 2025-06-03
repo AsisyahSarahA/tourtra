@@ -27,6 +27,8 @@
   </head>
   
   <body>
+
+    <div id="navbar"></div>
     
     <section>
       <div  class="relative w-full h-screen ">
@@ -35,7 +37,7 @@
           <img
             src="/img/mountainous-landscape-with-fog.jpg"
             alt=""
-            class="object-cover w-full h-full"
+            class="object-cover w-full h-full bg-cover "
           />
         </div>
 
@@ -69,7 +71,7 @@
                 Discover breathtaking destinations, personalized travel <br>
                 packages,  and unforgettable adventures. Whether you're <br> dreaming
                 of a spiritual  pilgrimage, a family vacation, or a <br> romantic
-                getaway, we're here to turn your travel dreams <br> into reality.
+                getaway, we're here to turn your travel dreams <br> into reality. <span id="reload-count">0</span> kali diakses</p>
               </p>
               <div class=" mt-6 mr-90   bg-[#2C7381] rounded-3xl">
               <p class="my-3  px-5  font-bold text-white " style="font-family: 'Londrina Solid', cursive">Join us</p>
@@ -97,12 +99,72 @@
           </div>
         </div>
       </div>
+        
+      <!-- about -->
+      <div id="about"></div>
+      <div id="review"></div>
+      <div id="transpost"></div>
+      <div id="tiket"></div>
       
+      <script>
+
+        // nabvar
+        fetch('/page/navbar.html')
+          .then(res => res.text())
+          .then(navbar => {
+            document.getElementById('navbar').innerHTML = navbar;
+          });
+
+        // about
+        fetch('/about.html')
+          .then(res => res.text())
+          .then(about => {
+            document.getElementById('about').innerHTML = about;
+          });
+
+        // transpost
+        fetch('/transpost.html')
+            .then(res => res.text())
+            .then(transpost => {
+              document.getElementById('transpost').innerHTML = transpost;
+            });   
+
+        // riview
+        fetch('/review.html')
+            .then(res => res.text())
+            .then(review => {
+              document.getElementById('review').innerHTML = review;
+            });
+
+        // tiket
+        fetch('/tiket.html')
+            .then(res => res.text())
+            .then(tiket => {
+              document.getElementById('tiket').innerHTML = tiket;
+            });   
+
+        // count website 
+        // Ambil data dari localStorage
+        let reloadCount = localStorage.getItem('reloadCount');
+
+        // Jika belum pernah disimpan, mulai dari 0
+        if (reloadCount === null) {
+          reloadCount = 0;
+        } else {
+          reloadCount = parseInt(reloadCount);
+        }
+
+        // Tambahkan 1 setiap reload
+        reloadCount++;
+
+        // Simpan kembali ke localStorage
+        localStorage.setItem('reloadCount', reloadCount);
+
+        // Tampilkan di halaman
+        document.getElementById('reload-count').textContent = reloadCount;
+
+
+  </script>
     </section>
-       
-    
-
-   
-
   </body>
 </html>
