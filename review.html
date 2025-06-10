@@ -574,11 +574,15 @@
       card.style.transition = 'transform 0.3s ease-in-out';
     });
   });
+
+  //panggil navbar
+    fetch('/l.html')
+      .then(res => res.text())
+      .then(navbar => {
+        document.getElementById('navbar').innerHTML = navbar;
+      });
 </script>
-
-
-
-    
+   
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
   </body>
 </html>
