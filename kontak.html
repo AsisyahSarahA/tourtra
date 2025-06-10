@@ -1,173 +1,276 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hubungi Kami - Arpin Maulana</title>
-    <link href="./output.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hubungi Kami</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="bg-gray-100 font-sans">
-        <div class="container mx-auto py-16 px-4 md:px-0">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
-                <div class="p-8">
-                    <div class="space-y-4">
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="container mx-auto py-16 px-4 md:px-0">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto bg-white shadow-md rounded-lg overflow-hidden"
+      >
+        <div class="p-8">
+          <div class="space-y-4"></div>
         </div>
-    </div>
-    <div class="bg-gray-50 p-8">
-        <form id="contactForm">
+        <div class="bg-gray-50 p-8">
+          <form id="contactForm">
             <div class="mb-4">
-                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nama Lengkap<span class="text-red-500">*</span>:</label>
-                <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Nama lengkap Anda">
-                <p class="text-red-500 text-xs italic mt-1 hidden" id="nameError">Nama harus diisi.</p>
+              <label
+                for="name"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Nama Lengkap<span class="text-red-500">*</span>:</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="Nama lengkap Anda"
+              />
+              <p class="text-red-500 text-xs italic mt-1 hidden" id="nameError">
+                Nama harus diisi.
+              </p>
             </div>
             <div class="mb-4">
-                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email<span class="text-red-500">*</span>:</label>
-                <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Alamat email Anda">
-                <p class="text-red-500 text-xs italic mt-1 hidden" id="emailError">Format email tidak valid.</p>
+              <label
+                for="email"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Email<span class="text-red-500">*</span>:</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="Alamat email Anda"
+              />
+              <p
+                class="text-red-500 text-xs italic mt-1 hidden"
+                id="emailError"
+              >
+                Format email tidak valid.
+              </p>
             </div>
             <div class="mb-4">
-                <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subjek:</label>
-                <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Subjek pesan Anda (opsional)">
+              <label
+                for="subject"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Subjek:</label
+              >
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="Subjek pesan Anda (opsional)"
+              />
             </div>
             <div class="mb-6">
-                <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Pesan<span class="text-red-500">*</span>:</label>
-                <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Tulis pesan Anda di sini"></textarea>
-                <p class="text-red-500 text-xs italic mt-1 hidden" id="messageError">Pesan tidak boleh kosong.</p>
-    </div>
-    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt text-indigo-500 mr-3"></i>
-                        <p class="text-gray-700">Tasikmalaya</p>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope text-indigo-500 mr-3"></i>
-                        <p class="text-gray-700"><a href="mailto:[alamat_email_anda]">arpinm89@gmail.com</a></p>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-phone text-indigo-500 mr-3"></i>
-                        <p class="text-gray-700"><a href="tel:[nomor_telepon_anda]">085862708927</a></p>
-                    </div>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="#" class="text-gray-500 hover:text-indigo-500"><i class="fab fa-facebook-f fa-lg"></i></a>
-                        <a href="#" class="text-gray-500 hover:text-indigo-500"><i class="fab fa-twitter fa-lg"></i></a>
-                        <a href="#" class="text-gray-500 hover:text-indigo-500"><i class="fab fa-instagram fa-lg"></i></a>
-                    </div>
-    <div class="flex items-center justify-end">
-        <button type="submit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300" id="submitButton">
-            Kirim Pesan
-        </button>
-        <div class="ml-3 hidden" id="loadingIndicator">
-            <svg class="animate-spin h-5 w-5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-            </svg>
-        </div>
-        <p class="text-green-500 text-sm italic mt-1 ml-3 hidden" id="successMessage">Pesan berhasil dikirim!</p>
-        <p class="text-red-500 text-sm italic mt-1 ml-3 hidden" id="errorMessage">Terjadi kesalahan saat mengirim pesan.</p>
-                    </div>
-                </form>
+              <label
+                for="message"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Pesan<span class="text-red-500">*</span>:</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="Tulis pesan Anda di sini"
+              ></textarea>
+              <p
+                class="text-red-500 text-xs italic mt-1 hidden"
+                id="messageError"
+              >
+                Pesan tidak boleh kosong.
+              </p>
             </div>
+            <div class="flex items-center">
+              <i class="fas fa-map-marker-alt text-indigo-500 mr-3"></i>
+              <p class="text-gray-700">Tasikmalaya</p>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-envelope text-indigo-500 mr-3"></i>
+              <p class="text-gray-700">
+                <a href="mailto:[alamat_email_anda]">arpinm89@gmail.com</a>
+              </p>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-phone text-indigo-500 mr-3"></i>
+              <p class="text-gray-700">
+                <a href="tel:[nomor_telepon_anda]">085862708927</a>
+              </p>
+            </div>
+            <div class="flex space-x-4 mt-4">
+              <a href="#" class="text-gray-500 hover:text-indigo-500"
+                ><i class="fab fa-facebook-f fa-lg"></i
+              ></a>
+              <a href="#" class="text-gray-500 hover:text-indigo-500"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a href="#" class="text-gray-500 hover:text-indigo-500"
+                ><i class="fab fa-instagram fa-lg"></i
+              ></a>
+            </div>
+            <div class="flex items-center justify-end">
+              <button
+                type="submit"
+                class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
+                id="submitButton"
+              >
+                Kirim Pesan
+              </button>
+              <div class="ml-3 hidden" id="loadingIndicator">
+                <svg
+                  class="animate-spin h-5 w-5 text-indigo-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  ></circle>
+                  <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+              </div>
+              <p
+                class="text-green-500 text-sm italic mt-1 ml-3 hidden"
+                id="successMessage"
+              >
+                Pesan berhasil dikirim!
+              </p>
+              <p
+                class="text-red-500 text-sm italic mt-1 ml-3 hidden"
+                id="errorMessage"
+              >
+                Terjadi kesalahan saat mengirim pesan.
+              </p>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
     <script src="script.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    const contactForm = document.getElementById('contactForm');
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const subjectInput = document.getElementById('subject');
-    const messageInput = document.getElementById('message');
-    const nameError = document.getElementById('nameError');
-    const emailError = document.getElementById('emailError');
-    const messageError = document.getElementById('messageError');
-    const successMessage = document.getElementById('successMessage');
-    const errorMessage = document.getElementById('errorMessage');
-    const submitButton = document.getElementById('submitButton');
-    const loadingIndicator = document.getElementById('loadingIndicator');
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contactForm");
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const subjectInput = document.getElementById("subject");
+        const messageInput = document.getElementById("message");
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const messageError = document.getElementById("messageError");
+        const successMessage = document.getElementById("successMessage");
+        const errorMessage = document.getElementById("errorMessage");
+        const submitButton = document.getElementById("submitButton");
+        const loadingIndicator = document.getElementById("loadingIndicator");
 
-    contactForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Mencegah pengiriman form standar
+        contactForm.addEventListener("submit", function (event) {
+          event.preventDefault(); // Mencegah pengiriman form standar
 
-        let isValid = true;
+          let isValid = true;
 
-        // Validasi Nama
-        if (nameInput.value.trim() === '') {
-            nameError.classList.remove('hidden');
+          // Validasi Nama
+          if (nameInput.value.trim() === "") {
+            nameError.classList.remove("hidden");
             isValid = false;
-        } else {
-            nameError.classList.add('hidden');
-        }
+          } else {
+            nameError.classList.add("hidden");
+          }
 
-        // Validasi Email
-        const emailValue = emailInput.value.trim();
-        if (emailValue === '') {
-            emailError.innerText = 'Email harus diisi.';
-            emailError.classList.remove('hidden');
+          // Validasi Email
+          const emailValue = emailInput.value.trim();
+          if (emailValue === "") {
+            emailError.innerText = "Email harus diisi.";
+            emailError.classList.remove("hidden");
             isValid = false;
-        } else if (!isValidEmail(emailValue)) {
-            emailError.innerText = 'Format email tidak valid.';
-            emailError.classList.remove('hidden');
+          } else if (!isValidEmail(emailValue)) {
+            emailError.innerText = "Format email tidak valid.";
+            emailError.classList.remove("hidden");
             isValid = false;
-        } else {
-            emailError.classList.add('hidden');
-        }
+          } else {
+            emailError.classList.add("hidden");
+          }
 
-        // Validasi Pesan
-        if (messageInput.value.trim() === '') {
-            messageError.classList.remove('hidden');
+          // Validasi Pesan
+          if (messageInput.value.trim() === "") {
+            messageError.classList.remove("hidden");
             isValid = false;
-        } else {
-            messageError.classList.add('hidden');
-        }
+          } else {
+            messageError.classList.add("hidden");
+          }
 
-        if (isValid) {
+          if (isValid) {
             // Tampilkan indikator loading dan sembunyikan tombol kirim
-            submitButton.classList.add('hidden');
-            loadingIndicator.classList.remove('hidden');
-            successMessage.classList.add('hidden');
-            errorMessage.classList.add('hidden');
+            submitButton.classList.add("hidden");
+            loadingIndicator.classList.remove("hidden");
+            successMessage.classList.add("hidden");
+            errorMessage.classList.add("hidden");
 
             // Simulasi pengiriman data (ganti dengan implementasi backend Anda)
             setTimeout(() => {
-                console.log('Data Formulir:', {
-                    name: nameInput.value,
-                    email: emailInput.value,
-                    subject: subjectInput.value,
-                    message: messageInput.value
-                });
+              console.log("Data Formulir:", {
+                name: nameInput.value,
+                email: emailInput.value,
+                subject: subjectInput.value,
+                message: messageInput.value,
+              });
 
-                // Sembunyikan indikator loading dan tampilkan tombol kirim
-                loadingIndicator.classList.add('hidden');
-                submitButton.classList.remove('hidden');
+              // Sembunyikan indikator loading dan tampilkan tombol kirim
+              loadingIndicator.classList.add("hidden");
+              submitButton.classList.remove("hidden");
 
-                // Tampilkan pesan sukses
-                successMessage.classList.remove('hidden');
-                errorMessage.classList.add('hidden');
+              // Tampilkan pesan sukses
+              successMessage.classList.remove("hidden");
+              errorMessage.classList.add("hidden");
 
-                // Reset form setelah berhasil (opsional)
-                contactForm.reset();
+              // Reset form setelah berhasil (opsional)
+              contactForm.reset();
 
-                // Sembunyikan pesan sukses setelah beberapa detik (opsional)
-                setTimeout(() => {
-                    successMessage.classList.add('hidden');
-                }, 5000);
+              // Sembunyikan pesan sukses setelah beberapa detik (opsional)
+              setTimeout(() => {
+                successMessage.classList.add("hidden");
+              }, 5000);
             }, 2000); // Simulasi waktu pengiriman 2 detik
-        } else {
+          } else {
             // Tampilkan pesan error umum jika validasi gagal
-            errorMessage.innerText = 'Harap periksa kembali isian formulir yang bertanda bintang.';
-            errorMessage.classList.remove('hidden');
-            successMessage.classList.add('hidden');
-        }
-    });
+            errorMessage.innerText =
+              "Harap periksa kembali isian formulir yang bertanda bintang.";
+            errorMessage.classList.remove("hidden");
+            successMessage.classList.add("hidden");
+          }
+        });
 
-    function isValidEmail(email) {
-        // Regular expression yang lebih baik untuk validasi email
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-});
+        function isValidEmail(email) {
+          // Regular expression yang lebih baik untuk validasi email
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
