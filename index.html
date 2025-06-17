@@ -28,31 +28,19 @@
     
   </head>
   
-  <body class="bg-gray-200">
-     <div class="flex justify-between w-80 border-2">
-      <nav
-        class="flex fixed z-50 bg-cover bg-center text-white p-5 pt-6"
-        style="
-          background-image: url('/asset/img/navbar.png');
-          height: 80px;
-          width: 60%;
-        "
-      >
-
-            <div>
-          <ul class="flex space-x-5">
-            <li class="text-2xl font-bold mr-15">Tour Tra</li>
-             <li><a href="#home" class="hover:text-gray-300">Home</a></li>
-            <li><a href="#about" class="hover:text-gray-300">About</a></li>
-            <li>
-              <a href="#review" class="hover:text-gray-300">Riview</a>
-            </li>
-            <li>
-              <a href="#transpost" class="hover:text-gray-300">Trans</a>
-            </li>
-            <li><a href="#tiket" class="hover:text-gray-300">Tiket</a></li>
-            <li>
-              <a href="#kontak" class="hover:text-gray-300">Contact</a>
+  <body class="bg-white">
+     <div class="flex justify-between w-80">
+      <nav class="flex fixed z-50 bg-cover bg-center text-white p-5 pt-8"
+        style="background-image: url('/asset/img/navbar.png'); height: 95px; width: 81%;"><div>
+          <ul class="flex space-x-8">
+            <li class="text-2xl font-bold mr-20">Tour Tra</li>
+            <li class="hidden text-2xl md:block">
+              <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+              <li><a href="#about" class="hover:text-gray-300">About</a></li>
+              <li><a href="#review" class="hover:text-gray-300">Riview</a></li>
+              <li><a href="#transpost" class="hover:text-gray-300">Trans</a></li>
+              <li><a href="#tiket" class="hover:text-gray-300">Tiket</a></li>
+              <li><a href="#kontak" class="hover:text-gray-300">Contact</a></li>
             </li>
           </ul>
         </div>
@@ -121,7 +109,7 @@
         <!-- Gambar kedua (background) -->
         <div class="absolute top-0 w-1/2 h-full w-full z-0">
           <img
-            src="/img/mountainous-landscape-with-fog.jpg.jpg"
+            src="/img/mountainous-landscape-with-fog.jpg"
             alt=""
             class="object-cover w-full h-full bg-cover "
           />
@@ -131,13 +119,15 @@
         <div
           class="absolute left-0 top-0 w-1/2 w-full h-[88%] z-10 pr-72 mt-20"
         >
-          <div class="relative w-full h-full">
+          <div class="relative w-full h-full md:h-[100%]">
             <!-- Gambar sebagai latar depan 4-->
-            <img
-              src="/img/asset1.png"
-              alt=""
-              class="object-cover w-full h-full "
-            />
+             <div class="md:scale-100 scale-100 w-full h-[full]">
+              <img
+                src="/img/asset1.png"
+                alt=""
+                class="object-cover w-[100%] h-[100%] "
+              />
+             </div>
             <!-- Teks menimpa gambar -->
             <div class="z-20 absolute top-10 ml-14 left-10">
               <p
@@ -159,9 +149,12 @@
                 of a spiritual  pilgrimage, a family vacation, or a <br> romantic
                 getaway, we're here to turn your travel dreams <br> into reality. <span id="reload-count">0</span> kali diakses</p>
               </p>
-              <div class=" mt-6 mr-90   bg-[#2C7381] rounded-3xl">
-              <p class="my-3  px-5  font-bold text-white " style="font-family: 'Londrina Solid', cursive">Join us</p>
-            </div>
+              <button type="submit" class="">
+                <div class=" mt-6 mr-90   bg-[#2C7381] rounded-3xl">
+                <p class="px-4 py-3 p-4 font-bold text-white " style="font-family: 'Londrina Solid', cursive">Login</p>
+              
+              </div>
+              </button>
 
             <!-- ICON SOSOAL MEDIA -->
 
@@ -191,7 +184,7 @@
       <div id="review"></div>
       <div id="transpost"></div>
       <div id="tiket"></div>
-      <div id="footer"></div>
+      <div id="kontak"></div>
       
       
 
