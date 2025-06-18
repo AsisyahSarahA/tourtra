@@ -14,7 +14,8 @@
       href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
       rel="stylesheet"
     />
-        
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
     <link href="/src/styles.css" rel="stylesheet" />
     <!-- font caveat -->
@@ -35,21 +36,21 @@
       <nav class="flex fixed z-50 bg-cover bg-center text-white p-5 pt-8"
         style="background-image: url('/asset/img/navbar.png'); height: 95px; width: 81%;"><div>
           <ul class="flex space-x-8">
-            <li class="text-2xl font-bold mr-20">Tour Tra</li>
+            <li class="text-2xl font-bold mr-15">Tour Tra</li>
             <li class="hidden text-2xl md:block">
-              <li><a href="#home" class="hover:text-gray-300">Home</a></li>
-              <li><a href="#about" class="hover:text-gray-300">About</a></li>
-              <li><a href="#review" class="hover:text-gray-300">Riview</a></li>
-              <li><a href="#transpost" class="hover:text-gray-300">Trans</a></li>
+              <li><a href="#home" class="hover:text-gray-300">Dashboard</a></li>
+              <li><a href="#about" class="hover:text-gray-300">Tentang Kami</a></li>
+              <li><a href="#review" class="hover:text-gray-300">Ulasan</a></li>
+              <li><a href="#transpost" class="hover:text-gray-300">Kendaraan</a></li>
               <li><a href="#tiket" class="hover:text-gray-300">Tiket</a></li>
-              <li><a href="#kontak" class="hover:text-gray-300">Contact</a></li>
+              <li><a href="#kontak" class="hover:text-gray-300">Kontak</a></li>
             </li>
           </ul>
         </div>
       </nav>
 
-      <section class="flex ml-[900px] fixed z-50">
-        <div class="mt-5 mr-5">
+      <section class="flex ml-[1080px] fixed z-50">
+        <div class="mt-5 ">
           <div class="flex items-center space-x-2">
             <!-- Search Field (Hanya muncul di md ke atas) -->
             <div class="relative w-64 hidden md:block">
@@ -93,13 +94,14 @@
                 />
               </svg>
             </button>
-
-            <button
-              type="submit"
-              class="fixed z-50 ml-[900px] md:hidden md:inline bg-[#3CB6CD] text-white rounded-full px-2 py-2"
-            >
-              <div class="md:text-sm">Login</div>
-            </button>
+          <a class="md:text-sm fixed z-50 ml-[900px] md:hidden md:inline bg-[#3CB6CD] text-white rounded-full px-2 py-2" href="/login.html">
+            
+            
+              
+                Logi
+          
+            </a>
+           
           </div>
         </div>
       </section>
@@ -146,10 +148,10 @@
                 Lombok island, bali island
               </p>
               <p class="text-[#2C7381] mt-6" style="font-family: 'Crimson Text', cursive">
-                Discover breathtaking destinations, personalized travel <br>
-                packages,  and unforgettable adventures. Whether you're <br> dreaming
-                of a spiritual  pilgrimage, a family vacation, or a <br> romantic
-                getaway, we're here to turn your travel dreams <br> into reality. <span id="reload-count">0</span> kali diakses</p>
+                Temukan tujuan yang menakjubkan, paket perjalanan yang dipersonalisasi, <br>
+                dan petualangan yang tak terlupakan.Apakah Anda sedang bermimpi tentang <br>perjalanan spiritual, 
+                liburan keluarga, atau pelarian romantis,<br>
+                 kami di sini untuk mewujudkan impian perjalanan Anda menjadi kenyataan.<br> menjadi kenyataan. <span id="reload-count">0</span> kali diakses</p>
               </p>
               <button type="submit" class="">
                 <div class=" mt-6 mr-90   bg-[#2C7381] rounded-3xl">
@@ -186,7 +188,7 @@
       <div id="review"></div>
       <div id="transpost"></div>
       <div id="tiket"></div>
-      <!-- <div id="kontak"></div> -->
+      <div id="kontak"></div>
       
       
 
@@ -205,6 +207,12 @@
           .then(res => res.text())
           .then(about => {
             document.getElementById('about').innerHTML = about;
+          });
+        // about
+        fetch('/login.html')
+          .then(res => res.text())
+          .then(login => {
+            document.getElementById('login').innerHTML = login;
           });
 
         // transpost
@@ -226,6 +234,12 @@
             .then(res => res.text())
             .then(tiket => {
               document.getElementById('tiket').innerHTML = tiket;
+            });   
+        // tiket
+        fetch('/home.html')
+            .then(res => res.text())
+            .then(home => {
+              document.getElementById('home').innerHTML = home;
             });   
 
         // count website 
@@ -282,4 +296,19 @@
     });
   });
 </script>
+
+<script>
+  const slider = document.getElementById('slider');
+  const scrollAmount = 300; // px
+
+  document.getElementById('scrollLeft').addEventListener('click', () => {
+    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  document.getElementById('scrollRight').addEventListener('click', () => {
+    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+</script>
 </html>
+
+

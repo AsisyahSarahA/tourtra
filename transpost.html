@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- flowbite -->
-     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transport</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!--Flowbite Cdn CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
      <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
-          <!-- font -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="/src/styles.css" rel="stylesheet" />
+    <!-- Tambahkan Alpine.js di <head> jika belum -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- font caveat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
 
-      <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nova+Script&display=swap" rel="stylesheet">
- 
-    <title>Transport</title>
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    
+  </head>
 <body class="bg-gray-100 max-w-screen mx-auto">
   <!-- Navbar -->
   <div id="navbar"></div>
@@ -25,19 +40,19 @@
         <h2 class="text-3xl font-semibold text-center mb-6 text-[#2C7381]" style="font-family: Caveat;"><i>Transportasi</i></h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Pesawat -->
-          <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+          <div data-modal-target="kendaraanModal" data-modal-toggle="kendaraanModal" class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
             <img src="/asset/img/plane.png" alt="Pesawat" class="mx-auto h-16 mb-4" />
             <p class="  font-bold  pl-4 text-center text-lg text-[#CD3CA1]">Pesawat</p>
             <p class="text-center text-sm  text-[#2C7381]"><i>Segera dapatkan tiket Tour Tra sekarang! Nikmati pengalaman perjalanan tak terlupakan bersama Tour Tra.</i></p>
           </div>
           <!-- Kereta -->
-          <div class="bg-cyan-100 p-6 rounded-xl shadow hover:shadow-md transition">
+          <div data-modal-target="kendaraanModal" data-modal-toggle="kendaraanModal" class="bg-cyan-100 p-6 rounded-xl shadow hover:shadow-md transition">
             <img src="/asset/img/train.png" alt="Kereta" class="mx-auto h-16 mb-4" />
             <p class="  font-bold pl-4 text-center text-lg text-[#CD3CA1]">Kereta</p>
             <p class="text-center text-sm  text-[#2C7381]"><i>Naik kereta bareng rombongan, tenang aja ada tim TourTa yang siap mendampingi.</i></p>
           </div>
           <!-- Bus -->
-          <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+          <div data-modal-target="kendaraanModal" data-modal-toggle="kendaraanModal" class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
             <img src="/asset/img/bus.png" alt="Bis" class="mx-auto h-16 mb-4" />
             <p class=" font-bold  pl-4 text-center text-lg text-[#CD3CA1]">Bis</p>
             <p class="text-center text-sm  text-[#2C7381]"><i>Perjalanan darat makin seru! Naik bus nyaman, didampingi TourTa dari awal sampai akhir.</i></p>
@@ -50,16 +65,16 @@
           <h2 class="text-3xl font-semibold text-center my-10 text-[#2C7381]" style="font-family: Caveat;"><i>Staycation</i></h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Kartu 1 -->
-            <div>
+            <button  data-modal-target="hotelModal" data-modal-toggle="hotelModal" >
               <div class="bg-white p-4 rounded-xl shadow hover:shadow-md transition">
               <img src="/asset/img/resort.jpg" alt="RESORT" class="rounded-lg mb-4 w-full h-50 object-cover">
               <p class=" font-bold  pl-4 text-center text-lg text-[#CD3CA1]">Resort</p>
               <p class="text-center text-sm  text-[#2C7381]"><i>Nikmati liburan tanpa ribet! Tiket pesawat, bus, dan kereta udah kami siapkan. Hotel pun aman. Bonusnya? 📸 View kece dan pemandangan alam yang bikin betah</i></p>
             </div>
-            </div>
+          </button>
             <!-- Kartu 2 -->
             <div>
-              <div class="bg-cyan-100 p-4 rounded-xl shadow hover:shadow-md transition">
+              <div  data-modal-target="hotelModal" data-modal-toggle="hotelModal" class="bg-cyan-100 p-4 rounded-xl shadow hover:shadow-md transition">
                 <img src="/asset/img/hotel.jpg" alt="RESORT" class="rounded-lg mb-4 w-full h-50 object-cover">
                 <p class=" font-bold  pl-4 text-center text-lg text-[#CD3CA1]">Resort</p>
                 <p class="text-center text-sm  text-[#2C7381]"><i>Transport lengkap, tidur nyaman, fasilitas lengkap, dan view yang aesthetic yang mata dimanjakan sama pemandangan indah sepanjang jalan. Kami TourTa emang juaranya liburan !!</i></p>
@@ -67,7 +82,7 @@
             </div>
             <!-- Kartu 3 -->
             <div>
-              <div class="bg-white p-4 rounded-xl shadow hover:shadow-md transition">
+              <div data-modal-target="hotelModal" data-modal-toggle="hotelModal" class="bg-white p-4 rounded-xl shadow hover:shadow-md transition">
               <img src="/asset/img/villa.jpg" alt="VILLA" class="rounded-lg mb-4 w-full h-50 object-cover">
               <p class=" font-bold  pl-4 text-center text-lg text-[#CD3CA1]">Villa</p>
               <p class="text-center text-sm  text-[#2C7381]"><i>Bersama TourTa, setiap perjalanan kamu bukan sekadar berpindah tempat. Tapi menikmati keindahan yang gak bisa dilihat dari jendela kamar  rumah kamu doang</i></p>
@@ -76,7 +91,179 @@
           </div>
 
     </section>
+
+
+
+    <!-- Modal -->
+    <div id="hotelModal" tabindex="-1" aria-hidden="true"
+        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto h-[calc(100%-1rem)] max-h-full bg-black/50">
+      <div class="relative w-full max-w-2xl max-h-full m-auto mt-20">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow">
+          <!-- Close Button -->
+          <div class="flex items-start justify-between p-4 border-b rounded-t">
+            <h3 class="text-xl font-semibold text-gray-900">
+              Staycation Booking
+            </h3>
+            <button type="button"
+              class="text-gray-400 bg-transparent hover:bg-red-100 hover:text-red-600 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+              data-modal-hide="hotelModal">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Modal Body -->
+          <div class="p-6 space-y-6">
+            <!-- Destination -->
+            <div>
+              <label class="block mb-1 text-sm font-medium text-gray-700">City, destination, or hotel name</label>
+              <input type="text" placeholder="City, hotel, place to go"
+                class="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Dates & Duration -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700">Check-in</label>
+                <input type="date"
+                  class="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+              <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700">Duration</label>
+                <select
+                  class="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+                  <option>1 night</option>
+                  <option>2 nights</option>
+                  <option>3 nights</option>
+                  <option selected>4 nights</option>
+                  <option>5 nights</option>
+                </select>
+              </div>
+              <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700">Check-out</label>
+                <input type="date"
+                  class="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+            </div>
+
+            <!-- Guest Info -->
+              <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700">Guests and Rooms</label>
+                <select
+                  class="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+                  <option>2 Adults, 0 Child, 1 Room</option>
+                  <option>1 Adult, 1 Child, 1 Room</option>
+                  <option>3 Adults, 2 Rooms</option>
+                </select>
+              </div>
+
+          
+
+          <!-- Modal Footer -->
+          <div class="flex items-center justify-end p-6 space-x-2 border-t border-gray-200 rounded-b">
+            <button data-modal-hide="hotelModal" type="button"
+              class="text-gray-500 bg-white border border-gray-200 hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 rounded-lg text-sm px-5 py-2.5">
+              Cancel
+            </button>
+            <button type="submit"
+              class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5">
+              🔍 Search Hotels
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Transport -->
+    <div id="kendaraanModal" tabindex="-1" aria-hidden="true"
+        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto h-[calc(100%-1rem)] max-h-full bg-black/50">
+      <div class="relative w-full max-w-2xl max-h-full m-auto mt-20">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow">
+          <!-- Close Button -->
+          <div class="flex items-start justify-between p-4 border-b rounded-t">
+            <h3 class="text-xl font-semibold text-gray-900">
+              Booking
+            </h3>
+            <button type="button"
+              class="text-gray-400 bg-transparent hover:bg-red-100 hover:text-red-600 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+              data-modal-hide="kendaraanModal">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Modal Body -->
+          <div class="p-6 space-y-6">
+            <!-- Destination -->
+            <div>
+              <label class="block mb-1 text-sm font-medium text-gray-700">Tujuan</label>
+              <input type="text" placeholder=".........."
+                class="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Dates & Duration -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700">Pemesanan</label>
+                <input type="date"
+                  class="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+              </div>
+              <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700">Durasi</label>
+                <select
+                  class="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+                  <option>1 jam</option>
+                  <option>2 jam</option>
+                  <option>3 jam</option>
+                  <option selected>4 jam</option>
+                  <option>5 jam</option>
+                </select>
+              </div>
+              
+            </div>
+
+            <!-- Guest Info -->
+              <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700">Maskapai</label>
+                <select
+                  class="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+                  <option></option>
+                  <option>Air Asia</option>
+                  <option>Garuda Indonesia</option>
+                  <option>Lion Air</option>
+                </select>
+              </div>
+
+          
+
+          <!-- Modal Footer -->
+          <div class="flex items-center justify-end p-6 space-x-2 border-t border-gray-200 rounded-b">
+            <button data-modal-hide="kendaraanModal" type="button"
+              class="text-gray-500 bg-white border border-gray-200 hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 rounded-lg text-sm px-5 py-2.5">
+              Cancel
+            </button>
+            <button type="submit"
+              class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5">
+              🔍 Search Hotels
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </main>
+
+  
+
+        
+
 <script>
 
     //panggil navbar

@@ -81,3 +81,15 @@
             });
         });
 
+// Slider functionality
+  const slider = document.getElementById('slider');
+  const scrollAmount = 300; // px
+
+  document.getElementById('scrollLeft').addEventListener('click', () => {
+    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  document.getElementById('scrollRight').addEventListener('click', () => {
+    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
